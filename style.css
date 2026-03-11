@@ -5,6 +5,10 @@ box-sizing:border-box;
 font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#0f0a06;
 color:#f5f5f5;
@@ -12,24 +16,52 @@ line-height:1.6;
 }
 
 
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.nav-logo{
+font-weight:bold;
+}
+
+.nav-cta{
+background:#c47b2a;
+padding:10px 20px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+}
+
 
 /* HERO */
 
 .hero{
 height:100vh;
-background-image:url("https://images.unsplash.com/photo-1470337458703-46ad1756a187");
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+url("https://images.unsplash.com/photo-1470337458703-46ad1756a187");
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding-top:80px;
 }
 
 .hero-content{
-background:rgba(0,0,0,0.55);
 padding:60px;
-border-radius:10px;
 max-width:600px;
 }
 
@@ -45,7 +77,6 @@ color:#ddd;
 }
 
 
-
 /* CTA */
 
 .cta{
@@ -55,13 +86,12 @@ border-radius:6px;
 color:white;
 cursor:pointer;
 display:inline-block;
-margin-top:20px;
+text-decoration:none;
 }
 
 .cta:hover{
 background:#a25f17;
 }
-
 
 
 /* SECTIONS */
@@ -71,6 +101,20 @@ padding:140px 10%;
 text-align:center;
 }
 
+
+/* TRUST */
+
+.trust{
+background:#140d07;
+padding:80px 10%;
+}
+
+.trust-grid{
+display:flex;
+justify-content:center;
+gap:50px;
+margin-top:30px;
+}
 
 
 /* PROBLEM */
@@ -88,11 +132,20 @@ padding:20px;
 border-radius:8px;
 }
 
-.solution-line{
-margin-top:30px;
-font-weight:bold;
+
+/* CARD STYLE */
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:10px;
+backdrop-filter:blur(6px);
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-8px);
+}
 
 
 /* SOLUTION */
@@ -103,7 +156,6 @@ gap:60px;
 justify-content:center;
 margin-top:50px;
 }
-
 
 
 /* PRODUCT */
@@ -121,7 +173,6 @@ border-radius:12px;
 }
 
 
-
 /* BENEFITS */
 
 .benefit-grid{
@@ -130,7 +181,6 @@ gap:60px;
 justify-content:center;
 margin-top:50px;
 }
-
 
 
 /* REVIEWS */
@@ -147,8 +197,12 @@ background:#1a120c;
 padding:30px;
 border-radius:10px;
 max-width:300px;
+transition:0.3s;
 }
 
+.review:hover{
+transform:translateY(-5px);
+}
 
 
 /* OFFER */
@@ -167,14 +221,12 @@ color:#bbb;
 }
 
 
-
 /* STORY */
 
 .story{
 max-width:700px;
 margin:auto;
 }
-
 
 
 /* FAQ */
@@ -188,7 +240,6 @@ text-align:left;
 .faq-item{
 margin:30px 0;
 }
-
 
 
 /* FOOTER */
@@ -211,7 +262,6 @@ color:#aaa;
 }
 
 
-
 /* MOBILE */
 
 @media (max-width:900px){
@@ -224,6 +274,7 @@ flex-direction:column;
 .benefit-grid,
 .review-grid,
 .problem-grid,
+.trust-grid,
 .footer-grid{
 flex-direction:column;
 }
