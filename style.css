@@ -6,7 +6,7 @@ font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
 }
 
 body{
-background:#111;
+background:#0f0a06;
 color:#f5f5f5;
 line-height:1.6;
 }
@@ -17,28 +17,34 @@ line-height:1.6;
 
 .hero{
 height:100vh;
+background-image:url("https://images.unsplash.com/photo-1470337458703-46ad1756a187");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background-image:url("https://images.unsplash.com/photo-1470337458703-46ad1756a187");
-background-size:cover;
-background-position:center;
+position:relative;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
-background:rgba(0,0,0,0.55);
-padding:60px;
-border-radius:10px;
+position:relative;
+max-width:700px;
 }
 
 .hero h1{
-font-size:64px;
+font-size:70px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
 margin-bottom:30px;
 color:#ddd;
 }
@@ -47,109 +53,111 @@ color:#ddd;
 
 /* BUTTON */
 
-.primary-btn{
+.cta{
 background:#c47b2a;
 border:none;
-padding:15px 32px;
+padding:16px 36px;
 font-size:18px;
 color:white;
-cursor:pointer;
 border-radius:6px;
-transition:0.3s;
+cursor:pointer;
+transition:.3s;
 }
 
-.primary-btn:hover{
+.cta:hover{
 background:#a25f17;
 }
 
 
 
-/* FEATURE SECTIONS */
+/* SPLIT SECTIONS */
 
-.feature{
+.split{
 display:flex;
 align-items:center;
 justify-content:center;
-padding:120px 10%;
 gap:80px;
+padding:140px 10%;
 }
 
-.feature.reverse{
+.split.reverse{
 flex-direction:row-reverse;
 }
 
-.feature-text{
-max-width:450px;
-}
-
-.feature-text h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-.feature-text p{
-color:#ccc;
-}
-
-.feature-image img{
-width:420px;
+.split img{
+width:450px;
 border-radius:12px;
 }
 
+.split-text{
+max-width:450px;
+}
+
+.split-text h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.split-text p{
+color:#ccc;
+}
 
 
-/* MENU */
 
-.menu{
-padding:120px 10%;
+/* DRINKS */
+
+.drinks{
+padding:140px 10%;
 text-align:center;
-background:#181818;
+background:#18110b;
 }
 
-.menu h2{
-font-size:40px;
-margin-bottom:60px;
+.drinks h2{
+font-size:42px;
+margin-bottom:70px;
 }
 
-.menu-grid{
+.drink-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:40px;
 }
 
-.menu-card{
-background:#222;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
+.drink{
+text-align:left;
 }
 
-.menu-card:hover{
-transform:translateY(-8px);
-}
-
-.menu-card img{
+.drink img{
 width:100%;
 border-radius:10px;
-margin-bottom:15px;
+margin-bottom:20px;
+}
+
+.drink h3{
+font-size:22px;
+margin-bottom:8px;
+}
+
+.drink p{
+color:#bbb;
 }
 
 
 
 /* CTA */
 
-.cta{
-padding:140px 20px;
+.cta-section{
+padding:160px 20px;
 text-align:center;
-background:#0e0e0e;
+background:#0c0704;
 }
 
-.cta h2{
+.cta-section h2{
 font-size:48px;
 margin-bottom:20px;
 }
 
-.cta p{
+.cta-section p{
 margin-bottom:30px;
 color:#bbb;
 }
@@ -162,7 +170,7 @@ footer{
 text-align:center;
 padding:30px;
 background:black;
-color:#aaa;
+color:#888;
 }
 
 
@@ -171,12 +179,12 @@ color:#aaa;
 
 @media (max-width:900px){
 
-.feature{
+.split{
 flex-direction:column;
 text-align:center;
 }
 
-.feature.reverse{
+.split.reverse{
 flex-direction:column;
 }
 
