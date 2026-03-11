@@ -24,18 +24,13 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
-}
-
-.hero-overlay{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
-position:relative;
-max-width:700px;
+background:rgba(0,0,0,0.55);
+padding:60px;
+border-radius:10px;
+max-width:600px;
 }
 
 .hero h1{
@@ -51,17 +46,16 @@ color:#ddd;
 
 
 
-/* BUTTON */
+/* CTA */
 
 .cta{
 background:#c47b2a;
-border:none;
-padding:16px 36px;
-font-size:18px;
-color:white;
+padding:15px 36px;
 border-radius:6px;
+color:white;
 cursor:pointer;
-transition:.3s;
+display:inline-block;
+margin-top:20px;
 }
 
 .cta:hover{
@@ -70,96 +64,129 @@ background:#a25f17;
 
 
 
-/* SPLIT SECTIONS */
+/* SECTIONS */
 
-.split{
+section{
+padding:140px 10%;
+text-align:center;
+}
+
+
+
+/* PROBLEM */
+
+.problem-grid{
 display:flex;
+gap:30px;
+justify-content:center;
+margin:40px 0;
+}
+
+.problem-grid div{
+background:#1b140e;
+padding:20px;
+border-radius:8px;
+}
+
+.solution-line{
+margin-top:30px;
+font-weight:bold;
+}
+
+
+
+/* SOLUTION */
+
+.solution-grid{
+display:flex;
+gap:60px;
+justify-content:center;
+margin-top:50px;
+}
+
+
+
+/* PRODUCT */
+
+.product{
+display:flex;
+gap:80px;
 align-items:center;
 justify-content:center;
-gap:80px;
-padding:140px 10%;
 }
 
-.split.reverse{
-flex-direction:row-reverse;
-}
-
-.split img{
-width:450px;
+.product img{
+width:420px;
 border-radius:12px;
 }
 
-.split-text{
-max-width:450px;
+
+
+/* BENEFITS */
+
+.benefit-grid{
+display:flex;
+gap:60px;
+justify-content:center;
+margin-top:50px;
 }
 
-.split-text h2{
-font-size:42px;
-margin-bottom:20px;
+
+
+/* REVIEWS */
+
+.review-grid{
+display:flex;
+gap:40px;
+justify-content:center;
+margin-top:50px;
 }
 
-.split-text p{
-color:#ccc;
+.review{
+background:#1a120c;
+padding:30px;
+border-radius:10px;
+max-width:300px;
 }
 
 
 
-/* DRINKS */
+/* OFFER */
 
-.drinks{
-padding:140px 10%;
-text-align:center;
+.offer{
 background:#18110b;
 }
 
-.drinks h2{
-font-size:42px;
-margin-bottom:70px;
+.offer-text{
+font-size:28px;
+margin:20px 0;
 }
 
-.drink-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+.offer-note{
+color:#bbb;
 }
 
-.drink{
+
+
+/* STORY */
+
+.story{
+max-width:700px;
+margin:auto;
+}
+
+
+
+/* FAQ */
+
+.faq{
+max-width:700px;
+margin:auto;
 text-align:left;
 }
 
-.drink img{
-width:100%;
-border-radius:10px;
-margin-bottom:20px;
-}
-
-.drink h3{
-font-size:22px;
-margin-bottom:8px;
-}
-
-.drink p{
-color:#bbb;
-}
-
-
-
-/* CTA */
-
-.cta-section{
-padding:160px 20px;
-text-align:center;
-background:#0c0704;
-}
-
-.cta-section h2{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.cta-section p{
-margin-bottom:30px;
-color:#bbb;
+.faq-item{
+margin:30px 0;
 }
 
 
@@ -167,10 +194,20 @@ color:#bbb;
 /* FOOTER */
 
 footer{
-text-align:center;
-padding:30px;
 background:black;
-color:#888;
+padding:50px 10%;
+text-align:center;
+}
+
+.footer-grid{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-bottom:30px;
+}
+
+footer p{
+color:#aaa;
 }
 
 
@@ -179,12 +216,15 @@ color:#888;
 
 @media (max-width:900px){
 
-.split{
+.product{
 flex-direction:column;
-text-align:center;
 }
 
-.split.reverse{
+.solution-grid,
+.benefit-grid,
+.review-grid,
+.problem-grid,
+.footer-grid{
 flex-direction:column;
 }
 
